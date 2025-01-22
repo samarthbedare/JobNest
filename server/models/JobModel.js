@@ -1,6 +1,6 @@
-import mangoose from "mongoose";
+import mongoose from "mongoose";
 
-const JobSchema = new mangoose.Schema({
+const JobSchema = new mongoose.Schema({
     title : {
         type :String,
         required :true,
@@ -42,17 +42,17 @@ const JobSchema = new mangoose.Schema({
         ],
     likes:[
         {
-            type:Mongoose.Schema.Types.ObjectId,
+            type:mongoose.Schema.Types.ObjectId,
             ref:"User",
         },
     ],
     createdBy:{
-        type:Mongoose.Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:"User",   
     },
     applicants:[
         {
-            type:Mongoose.Schema.Types.ObjectId,
+            type:mongoose.Schema.Types.ObjectId,
             ref:"User",
         },
     ],
